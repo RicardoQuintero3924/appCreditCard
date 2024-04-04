@@ -190,3 +190,165 @@ button:hover {
 .acciones button.rechazar:hover {
     background-color: #dc3545;
 }
+/* Estilos adicionales para la vista de usuarios */
+.form-container {
+    margin-top: 20px;
+}
+
+.form-container h2 {
+    margin-bottom: 10px;
+}
+
+.usuario-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.usuario-form label {
+    display: block;
+    font-weight: bold;
+}
+
+.usuario-form input[type="text"],
+.usuario-form input[type="email"],
+.usuario-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.usuario-form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.usuario-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.usuarios-list {
+    margin-top: 20px;
+}
+
+.usuarios-list h2 {
+    margin-bottom: 10px;
+}
+
+.usuarios-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.usuarios-list li {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.usuarios-list li span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.usuarios-list li button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.usuarios-list li button:hover {
+    background-color: #0056b3;
+}
+/* Estilos adicionales para la vista de manejo de tarjetas de crédito */
+.form-container {
+    margin-top: 20px;
+}
+
+.form-container h2 {
+    margin-bottom: 10px;
+}
+
+.tarjeta-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.tarjeta-form label {
+    display: block;
+    font-weight: bold;
+}
+
+.tarjeta-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.tarjeta-form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.tarjeta-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.tarjetas-list {
+    margin-top: 20px;
+}
+
+.tarjetas-list h2 {
+    margin-bottom: 10px;
+}
+
+.tarjetas-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tarjetas-list li {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.tarjetas-list li span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.tarjetas-list li button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.tarjetas-list li button:hover {
+    background-color: #0056b3;
+}

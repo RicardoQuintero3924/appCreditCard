@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manejo de Tarjetas de Crédito</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>Manejo de Tarjetas de Crédito</h1>
+  <!-- Formulario para Crear/Actualizar Tarjeta de Crédito -->
+  <div class="form-container">
+    <h2>Crear/Actualizar Tarjeta de Crédito</h2>
+    <form action="#" method="post" class="tarjeta-form">
+      <div class="form-group">
+        <label for="numeroTarjeta">Número de Tarjeta:</label>
+        <input type="text" id="numeroTarjeta" name="numeroTarjeta" required>
+      </div>
+      <div class="form-group">
+        <label for="cupo">Cupo:</label>
+        <input type="text" id="cupo" name="cupo" required>
+      </div>
+      <div class="form-group">
+        <label for="codigoCVV">Código CVV:</label>
+        <input type="text" id="codigoCVV" name="codigoCVV" required>
+      </div>
+      <div class="form-group">
+        <label for="fechaVencimiento">Fecha de Vencimiento:</label>
+        <input type="text" id="fechaVencimiento" name="fechaVencimiento" required>
+      </div>
+      <div class="form-group">
+        <label for="usuarioTitular">Usuario Titular:</label>
+        <input type="text" id="usuarioTitular" name="usuarioTitular" required>
+      </div>
+      <div class="form-group">
+        <label for="tipoTarjeta">Tipo de Tarjeta:</label>
+        <input type="text" id="tipoTarjeta" name="tipoTarjeta" required>
+      </div>
+      <div class="form-group">
+        <label for="limiteCredito">Límite de Crédito:</label>
+        <input type="text" id="limiteCredito" name="limiteCredito" required>
+      </div>
+      <div class="form-group">
+        <label for="fechaEmision">Fecha de Emisión:</label>
+        <input type="text" id="fechaEmision" name="fechaEmision" required>
+      </div>
+      <div class="form-group">
+        <label for="estadoTarjeta">Estado de Tarjeta:</label>
+        <input type="text" id="estadoTarjeta" name="estadoTarjeta" required>
+      </div>
+      <div class="form-group">
+        <label for="saldoActual">Saldo Actual:</label>
+        <input type="text" id="saldoActual" name="saldoActual" required>
+      </div>
+      <button type="submit">Guardar</button>
+    </form>
+  </div>
+  <!-- Lista de Tarjetas de Crédito -->
+  <div class="tarjetas-list">
+    <h2>Lista de Tarjetas de Crédito</h2>
+    <ul>
+      <li>
+        <span>Número de Tarjeta: 1234567890123456</span>
+        <span>Cupo: $1000</span>
+        <span>Código CVV: 123</span>
+        <span>Fecha de Vencimiento: 12/25</span>
+        <span>Usuario Titular: Juan Pérez</span>
+        <span>Tipo de Tarjeta: Visa</span>
+        <span>Límite de Crédito: $5000</span>
+        <span>Fecha de Emisión: 2023-01-15</span>
+        <span>Estado de Tarjeta: Activa</span>
+        <span>Saldo Actual: $200</span>
+        <button class="editar">Editar</button>
+        <button class="eliminar">Eliminar</button>
+      </li>
+      <!-- Repite esta estructura para cada tarjeta de crédito -->
+    </ul>
+  </div>
+</div>
+</body>
+</html>

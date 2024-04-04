@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuarios</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>Usuarios</h1>
+  <!-- Formulario para Crear/Actualizar Usuario -->
+  <div class="form-container">
+    <h2>Crear/Actualizar Usuario</h2>
+    <form action="#" method="post" class="usuario-form">
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+      </div>
+      <div class="form-group">
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+      </div>
+      <button type="submit">Guardar</button>
+    </form>
+  </div>
+  <!-- Lista de Usuarios -->
+  <div class="usuarios-list">
+    <h2>Lista de Usuarios</h2>
+    <ul>
+      <li>
+        <span>Nombre: Juan Pérez</span>
+        <span>Correo electrónico: juan@example.com</span>
+        <button class="editar">Editar</button>
+        <button class="eliminar">Eliminar</button>
+      </li>
+      <!-- Repite esta estructura para cada usuario -->
+    </ul>
+  </div>
+</div>
+</body>
+</html>
