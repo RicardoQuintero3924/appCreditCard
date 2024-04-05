@@ -1,14 +1,46 @@
-##Spring Configuration
 server:
   port: 8080
 spring:
   application:
-    name: appCreditCard
+    name: "appCreditCard"
   devtools:
     add-properties: false
   h2:
     console:
       enabled: true
-      path: /h2
+      path: "/h2"
   profiles:
-    include:
+    active: "${SPRING_PROFILES_ACTIVE:local}"
+    include: null
+  adapter:
+    aws:
+      r2dbc:
+        local:
+          dbname: "appCreditCard"
+          username: "postgres"
+          password: "123456"
+          host: "localhost"
+          port: "5433"
+          schema: "public"
+  mail:
+    host: "smtp.gmail.com"
+    port: "587"
+    username: "appCreditCard59@gmail.com"
+    password: "appCreditCard59!*-"
+    properties:
+      smtp:
+        auth: true
+      starttls:
+        enable: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,prometheus"
+  endpoint:
+    health:
+      probes:
+        enabled: true
+cors:
+  allowed-origins: "http://localhost:4200,http://localhost:8080"

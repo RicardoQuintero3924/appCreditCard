@@ -33,10 +33,10 @@ public abstract class ReactiveAdapterOperations<E, D, I, R extends ReactiveCrudR
         return data != null ? toEntityFn.apply(data) : null;
     }
 
-    public Mono<E> save(E entity) {
-        return saveData(toData(entity))
-                .map(this::toEntity);
-    }
+//    public Mono<E> save(E entity) {
+//        return saveData(toData(entity))
+//                .map(this::toEntity);
+//    }
 
     protected Flux<E> saveAllEntities(Flux<E> entities) {
         return saveData(entities.map(this::toData))

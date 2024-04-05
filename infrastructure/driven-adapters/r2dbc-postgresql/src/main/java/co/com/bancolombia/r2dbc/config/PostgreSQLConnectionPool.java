@@ -6,28 +6,33 @@ import io.r2dbc.pool.ConnectionPoolConfiguration;
 import io.r2dbc.postgresql.PostgresqlConnectionConfiguration;
 import io.r2dbc.postgresql.PostgresqlConnectionFactory;
 
+import lombok.RequiredArgsConstructor;
+import lombok.extern.java.Log;
+import org.reactivecommons.utils.ObjectMapper;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 @Configuration
+@RequiredArgsConstructor
+@Log
 public class PostgreSQLConnectionPool {
-    // TODO: change pool connection properties based on your resources.
     public static final int INITIAL_SIZE = 12;
     public static final int MAX_SIZE = 15;
     public static final int MAX_IDLE_TIME = 30;
 
 	@Bean
-	public ConnectionPool getConnectionConfig() {
-        // TODO: change these properties for yours
-		PostgresqlConnectionProperties pgProperties = new PostgresqlConnectionProperties();
-		pgProperties.setDatabase("postgres");
-		pgProperties.setHost("localhost");
-		pgProperties.setPort(5432);
-		pgProperties.setUsername("postgres");
-		pgProperties.setPassword("secret");
-		pgProperties.setSchema("public");
+	@Profile("local")
+	@ConfigurationProperties("spring.adapter.aws.r2dbc.local")
+	PostgresqlConnectionProperties getConfigurationLocal(){
+		return new PostgresqlConnectionProperties();
+	}
 
-		return buildConnectionConfiguration(pgProperties);
+	@Bean
+	@Profile("local")
+	ConnectionPool getConnectionConfigLocal(PostgresqlConnectionProperties properties){
+		return buildConnectionConfiguration(properties);
 	}
 
 	private ConnectionPool buildConnectionConfiguration(PostgresqlConnectionProperties properties) {
